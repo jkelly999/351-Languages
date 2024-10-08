@@ -1,0 +1,81 @@
+program ForPrac
+
+implicit none
+
+
+!declaration
+ character(len = 40) :: statement
+ character(len = 25) :: question
+ character(len = 15) :: fullname
+ integer :: i, j, k, l, m
+ real :: p
+ p = 5.0
+ j = 1
+ m = 99
+ 
+ !printing integer
+ 
+ print *, m
+ 
+ !printing real type
+
+ print *, p
+ 
+ !printing character type
+ 
+ question = "Do you own a hellcat?"
+ print *, question
+ 
+ !string concatenation
+ 
+ fullname = "Prof. Jardin"
+ 
+ statement = fullname//question
+ 
+ print *, statement
+ 
+!do loop    
+ do i=1,5
+    
+    print *, i
+    
+    end do
+    
+!do while loop with exit
+do while(j < 5)
+    print *, "Im enjoying this language so far"
+    
+    j = j + 1
+    
+    if(j == 4) then
+     exit
+    end if
+
+  end do    
+    
+!nested loop with a stop, cycle
+
+kloop: do k=1,6
+    lloop: do l=1,6
+    
+    if(k == 2)then
+        cycle
+    end if
+    
+    if(k == 5) then
+        stop
+    end if
+    
+    print *, k, l
+
+    
+    end do lloop
+
+end do kloop
+
+
+
+
+
+
+end program ForPrac
