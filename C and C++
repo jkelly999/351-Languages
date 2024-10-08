@@ -1,0 +1,109 @@
+#include <iostream>
+#include <stdio.h>
+#include <string.h>
+
+using namespace std;
+
+//parent and child class
+
+class SixTwoHemi{
+public:
+    int BiggerV8;
+private:
+    string SuperCharger;
+};
+class SixFourHemi : public SixTwoHemi{
+public:
+    int SmallerV8;
+private:
+    string MoreGas;
+};
+
+//multiparamter function
+
+int add(int d, int e){
+    return d + e;
+}
+
+int main() {
+    
+    //declaration of at least three datatypes
+    
+    int a = 0;
+    int j = 1;
+    int b = 999;
+    float c = 999.99;
+    char engine[20] = "Supercharged ";
+    char horsepower[] = "707HP!";
+    int d = 99;
+    int e = 99;
+    
+    //printing of three datatypes
+    
+    printf("%s\n", horsepower);
+    
+    printf("%d\n", b);
+    
+    printf("%.2f\n", c);
+    
+    cout << "Hello World!" << endl;
+    
+    //string concatenation
+    
+    strcat(engine, horsepower);
+    
+    printf("%s\n", engine);
+    
+    //printing function output
+    
+    int sum = add(d,e);
+    
+    printf("%d\n", sum);
+    
+    //while Loop w/ a break
+    
+    while(a < 5){
+        if(a == 4){
+            break;
+        }
+        printf("a: %d\n", a);
+        a++;
+    }
+    
+    //for loop w/ continue
+    
+    for(int i = 0; i < 5; i++){
+        if(i == 3){
+            continue;
+        }
+        printf("C++ is a carbon copy of C :(\n");
+    }
+    
+    //do while loop w/ goto
+    before:
+    
+    do{
+        printf("%d\n", j);
+        j++;
+        if(j >= 5){
+            break;
+        }
+        if(j < 5){
+            goto before;
+        }
+    }
+    while(1);
+   
+   //nested loop
+   
+   for(int k = 1; k <= 3; k++){
+       for(int l = 1; l <= 3; l++){
+           printf("%d\t", k * l);
+       }
+       printf("\n");
+   }
+   
+   
+   
+    return 0;
+}
