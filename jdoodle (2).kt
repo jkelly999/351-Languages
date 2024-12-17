@@ -1,0 +1,71 @@
+@file:JvmName("JDoodle")
+fun main() {
+
+ //declaration of three data types
+  
+  val x: Int = 99
+  val y: Double = 999.99
+  val z: Short = 15
+  
+  //printing of three data types
+  
+  println("Int: " + x)
+  println("Double: " + y)
+  println("Short: " + z)
+  
+  //for loop w/ continue
+  
+  for(num in 0..5){
+    if(num == 2){
+     continue;
+    }
+    println(num)
+  }
+  
+  //while loop w/ break
+  
+  var i = 0
+  while(i < 4){
+    println(i)
+    if(i == 2){
+      break;
+    }
+    i++
+  }
+  
+  //do while loop
+  
+  var j = 0;
+  do{
+     println(j)
+     j++
+  }while(j < 5)
+ 
+ //string concatenation
+ 
+ var name : String = " Dennis Ritchie and "
+ var language : String = "C"
+ 
+ println("String Concat:" + name.plus(language))
+  
+  
+  //multiparameter function
+  
+  fun sum(a: Int, b:Int): Int{
+    return a + b
+  }
+  
+  //printing of function
+  
+  val result = sum(99, 99)
+  println("Result: $result")
+  
+  
+  
+  
+  
+  
+  
+  
+  
+}
