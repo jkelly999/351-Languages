@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+<head>
+    <title>Number List</title>
+</head>
+<body>
+
+<p>Look Back was an amazing movie.</p>
+<p>Kyomoto and Fujino were inspirable.</p>
+<div id = 'output'> </div>
+
+    <script type = "text/javascript">
+
+        let htmlElements = document.querySelectorAll("p");
+        let result;
+        let num = 999;
+        let str1 = "藤本先生(Fujimoto-Sensei)";
+        let num2 = 9999;
+        let bool1 = true;
+        let str2 = "藤野　と";
+        let str3 = "京本";
+
+        //printing of three datatypes
+
+        document.write("Str1: " + str1 + "<br>");
+        document.write("Num2: " + num2 +"<br>");
+        document.write("Bool1: " + bool1 + "<br>");
+
+        //string concatenation
+
+        let sum = `${str2} ${str3}`;
+        console.log(sum);
+
+        //for loop
+
+        for(let i = 0; i < htmlElements.length; i++){
+            console.log(htmlElements[i]);
+        }
+
+        //if..else
+
+        if(num > 1000){
+            result = "Positivity";
+        }else{
+            result = "Not Positivity";
+        }
+        document.getElementById("output").innerHTML = result;
+
+        //while loop w/ continue and break
+
+        let output = document .getElementById("output");
+        var count = 0;
+        output.innerHTML = "Starting Loop <br>";
+        while(count < 10){
+            if(count === 5){
+                output.innerHTML += "Broken at 5<br>";
+                break;
+            }
+            if(count === 3){
+                count++;
+                output.innerHTML += "Skipping count 3<br>";
+                continue;
+            }
+            output.innerHTML+="Current Count : " + count + "<br>";
+            count++;
+        }
+        output.innerHTML+="Loop finished. <br><br>";
+
+        //for...in
+
+        let car =  {
+            brand: "Dodge",
+            model: "Scat Pack",
+            color: "Black",
+        }
+        output.innerHTML += "Car Information: <br>";
+        for (key in car){
+            output.innerHTML += key + " - > " + car[key] + "<br>";
+        }
+
+        //for...of
+
+        const arr = ["Bleach", "Dandadan", "Blue Lock", "Blue Box"];
+        animeLoop: for(let ele of arr){
+            output.innerHTML += ele + "<br>";
+        }
+
+    </script>
+
+</body>
+</html>
